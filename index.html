@@ -1,117 +1,155 @@
-<html><!--Head--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
+<html lang="en">
 
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Hunter Grayson's</title>
         <link rel="stylesheet" type="text/css" href="./CSS/My_Portfolio.css">    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
 
     <!--Body-->
-    
+    <body class="Background">
+
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!--Open and close contact form onclick-->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
         <!--Background video-->
-        <div id="Home">
-            <div class="col">  
-                <video class="bottom" autoplay="" muted="" id="Hunters_Video">
+        <div id="Home">  
+                <video autoplay muted id="Hunters_Video">
                     <source src="./Videos/portfolio_video.mp4" type="video/mp4">
                     <!--Display if video fails to run-->
                     I probably messed up this video and need to fix it.
                 </video>
-            </div>
         </div>
 
         <!--Video text-->
         <div class="Video_Text">
             <h1 class="white-text">Hunter Grayson's Portfolio</h1>
-            <p class="center">
-                <em>
-                    <q class=>Ability is what you’re capable of doing. Motivation determines what you do. Attitude determines how well you do it.</q>
-                <br>
-                    <br>-Lou holtz
-                </em>
-                <br>
-                <br> My name is Hunter Grayson. Welcome to my portfolio website. This is where I will showcase who I am and what I have accomplished.
-            </p>
+            <strong>
+                <p class="center">
+                    <em>
+                        <q>Ability is what you’re capable of doing. Motivation determines what you do. Attitude determines how well you do it.</q>
+                    <br>
+                        <br>-Lou holtz
+                    </em>
+                    <br>
+                    <br> My name is Hunter Grayson. Welcome to my portfolio website. This is where I will showcase who I am and what I have accomplished.
+                </p>
+            </strong>
+        </div>
+
+        <!--Slideshow-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 4 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/me.jpg" alt="selfie">
+                        <div class="text">Hello, I'm Hunter!</div>
+                    </div>
+                    <!-- Slide 2 of 4 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/casper.jpg" alt="Casper">
+                        <div class="text">I am from Casper Wyoming.</div>
+                    </div>
+                    <!-- Slide 3 of 4 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/pic.jpg" alt="html/css">
+                        <div class="text">So far in this course I have learned about html/css.</div>
+                    </div>
+                    <!-- Slide 4 of 4 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/js.jpg" alt="Javascript">
+                        <div class="text">and Javascript.</div>
+                    </div>
+                    <!--Prev/Next-->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                    <br> 
+                    <!-- Slideshow dots -->
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+            </div>
         </div>
 
         <!--About section-->
-        <div class="row" id="About">
+        <div class="Row" id="About">
             <!--Left column-->
+            <div class="Column_2">
+                <img src="./Images/bluepc.jpg" alt="blue pc">
+            </div>
+
+            <!--Right column-->
             <div class="Column_1">
                 <h1>About Me</h1>
-                <p>I am an aspiring Software Developer. I have a beautiful long term girlfriend, and love traveling.
+                <p1>
+                    I am an aspiring Software Developer. I have a beautiful long term girlfriend, and love traveling.
                     <br>
                     <br>I am currently a student in <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, 
                     this course teaches the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. By the end of this course I hope to excel 
                     in a professional environment.
                     <br>
                     <br>As I continue through my career I will continue to add on to my portfolio with the work found in my <a href="#GitHub">GitHub</a>.
-                </p>
-            </div>
-
-            <br>
-            <br>
-
-            <!--Right column-->
-            <div class="Column_2">
-                <img src="./Images/bluepc.jpg"  width="520px" height="360px">
+                </p1>
             </div>
         </div>
         
         <!--GitHub section-->
-        <div class="row" id="GitHub">
+        <div class="Row" id="GitHub">
             <!--Left column-->
-            <div class="Column_2">
-                <img src="./Images/Octocat.jpg">
-            </div>
-            <!--Right column-->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <br>
-                    <p1><center>You can view my current coding projects on my GitHub profile below</center></p>
-                <br>
-                  <h2><center> <a href="https://github.com/H-Grayson" target="tab">Hunter Grayson's GitHub</a></center></p>
-                <br>
+                <p>You can view my current coding projects on my GitHub repo which you can access by clicking on the image to the right 
+                    <br>
+                    <p class="center"><a href="https://github.com/H-Grayson" target="_blank"></a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/H-Grayson" target="_blank"><img src="./Images/Octocat.jpg"></a>
             </div>
         </div>
 
 
         <!--Contact-->
         <div id="Contact"> 
-            <!--Left column-->
-            <div class="Column_1">
-                <p>Contact<p>
-                <!--This is where the information will be sent-->
-                <form action="https://formspree.io/f/mvolrgqe" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" placeholder="Please write your message here">
-                        <input type="submit" value="Submit">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/mvolrgqe" method="POST" class="form-container">
+                    <h2>Contact</h2>
+                        <label for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Please enter your name here" name="name" required>
+                        <label for="name"><b>Phone</b></label>
+                            <input type="text" placeholder="Please enter your phone number" name="phone">
+                        <label for="name"><b>Email</b></label>
+                            <input type="text" placeholder="Please enter your email here" name="name" required>
+                        <label for="name"><b>Message</b></label>
+                            <input type="text" placeholder="Please write your message here" name="message">
+                            
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>  
             </div>
-
-            <!--Right column-->
-            <div class="Column_2">
-                <img src="./Images/bluepc.jpg"  width="520px" height="360px">
-            </div>
         </div>
-    </body>
-
 
         <!--Footer section-->
         <footer>    
-            <p2><center>Thank You!</center></p2>
+            <h2 class="center">Thank You!</h2>
         </footer>
-
+        <script src="JS/JS.js"></script>
+    </body>
 </html>

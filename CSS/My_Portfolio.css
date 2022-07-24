@@ -15,6 +15,11 @@ body {
     user-select: none; /*prevents text from being highlighted*/
 }
 
+/* Container */
+.container {
+    margin: 20px;
+}
+
 /* Contributes to the fade effect */
 body.fade-out {
     opacity: .1; /* sets level of page load */
@@ -25,7 +30,6 @@ h1 {
     text-transform: uppercase; /*makes everything caps*/
     font-family: "Open Sans"; /*font for all h1 headings*/
     text-align: center; 
-    margin-top: 3%;
     color: white
 }
 
@@ -52,6 +56,15 @@ h2:hover {
     transition: transform 1s;
 }
 
+/* Header 4 text */
+
+h4 {
+    text-transform: uppercase; /*makes everything caps*/
+    font-family: "Open Sans"; /*font for all h1 headings*/
+    text-align: center; 
+    color: white
+}
+
 /* Styling for portfolio title text */
 .white-text {
     color: white;
@@ -74,7 +87,7 @@ p1 {
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 18px;
     padding-left: 20px;
     padding-right: 20px;
     color: aliceblue;
@@ -113,6 +126,9 @@ img:hover {
     transition: 5s;
 } 
 
+.githubImg {
+    height: 80%;
+}
 /*Styling for footer */
 footer {
     padding:2%;
@@ -125,6 +141,7 @@ footer {
     overflow: hidden;
     background-color: black;
     position: fixed; 
+    display: inline-block;
     top: 0;
     width: 100%; 
     z-index: 1; 
@@ -344,6 +361,10 @@ footer {
     background-color: lightblue;
 }
 
+.Column_2_Image {
+    height: 100%;
+    width: 100%;
+}
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {
 	content: "";

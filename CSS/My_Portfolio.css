@@ -65,6 +65,12 @@ h4 {
     color: white
 }
 
+h4:hover {
+    filter: grayscale(10%);
+    transform: scale(1.5);
+    transition: transform 1s;
+}
+
 /* Styling for portfolio title text */
 .white-text {
     color: white;
@@ -123,7 +129,7 @@ img {
 /* Image element hover effects */
 img:hover {
 	filter: grayscale(5%);
-    transition: 5s;
+    transition: 2s;
 } 
 
 .githubImg {
@@ -353,6 +359,10 @@ footer {
     background-color: black;
 }
 
+.Column_1_Image { 
+    height: 65%;
+}
+
 .Column_2 {
     float: left;
     width: 50%; 
@@ -364,6 +374,10 @@ footer {
 .Column_2_Image {
     height: 100%;
     width: 100%;
+}
+
+.LinkedIn_Image {
+    justify-content: center;
 }
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
 .Row:after {

@@ -135,6 +135,11 @@ img:hover {
 .githubImg {
     height: 80%;
 }
+
+.projectImg {
+    height: 80%;
+    width: 50%;
+}
 /*Styling for footer */
 footer {
     padding:2%;
